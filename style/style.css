@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --normal-font: 400;
+    --bold-font: 600;
+    --bolder-font: 900;
+    --line-height: 1.5rem;
+    --cor-prim: #132132;
+    --cor-secd: #898751;
+    --cor-terc: #785431;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Exo 2", sans-serif;
+}
+
+label {
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 6px;
+    position: relative;
+}
+
+#checkTheme {
+    display: none;
+}
+
+
+.moon {
+    color: orange;
+}
+
+.sun{
+    color: red;
+}
+
+.switch {
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.theme-switcher {
+
+}
+
+/* Nota: ao ser checado, o .label e o .switch receberá essas caracterísitcas */
+#checkTheme:checked + .label .switch {
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transform: translateX(22px);
+}
